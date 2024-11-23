@@ -4,4 +4,5 @@ export const buttonColors = {
 
 export const AppColors = {
   lightBlue: '#C8D9F9',
+  white: '#FFFFFF',
 };

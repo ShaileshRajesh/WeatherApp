@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders splash screen 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#C8D9F9",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "height": 320,
+        "marginTop": "5%",
+        "width": 300,
+      }
+    }
+  >
+    <View
+      accessibilityIgnoresInvertColors={true}
+      style={
+        {
+          "height": "100%",
+          "resizeMode": "cover",
+        }
+      }
+    >
+      <Image
+        source={
+          {
+            "testUri": "../../../assets/Icons/blueBackground.png",
+          }
+        }
+        style={
+          [
+            {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            {
+              "height": "100%",
+              "width": undefined,
+            },
+            undefined,
+          ]
+        }
+      />
+      <Image
+        resizeMode="cover"
+        source={
+          {
+            "testUri": "../../../assets/Icons/droplets.png",
+          }
+        }
+        style={
+          {
+            "alignSelf": "center",
+            "justifyContent": "center",
+            "top": "5%",
+          }
+        }
+      />
+      <Image
+        resizeMode="cover"
+        source={
+          {
+            "testUri": "../../../assets/Icons/walking_in_rain.png",
+          }
+        }
+        style={
+          {
+            "alignSelf": "center",
+            "left": "5%",
+            "position": "absolute",
+            "top": "35%",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginTop": "45%",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#0F62FE",
+              "fontFamily": "AnonymousPro-Bold",
+              "fontSize": 48,
+            },
+          ]
+        }
+      >
+        raindrops
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#0F62FE",
+              "fontFamily": "AnonymousPro-Regular",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Only grab your umbrella when
+        
+
+        <Text
+          style={
+            [
+              {
+                "color": "#0F62FE",
+                "fontFamily": "AnonymousPro-Regular",
+                "fontSize": 18,
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          you really need it.
+        </Text>
+      </Text>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={false}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#0F62FE",
+            "borderRadius": 25,
+            "justifyContent": "center",
+            "marginTop": 25,
+            "opacity": 1,
+            "paddingVertical": 8,
+            "width": "90%",
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#FFFFFF",
+                "textAlign": "center",
+              },
+              {
+                "color": "#FFFFFF",
+                "fontFamily": "AnonymousPro-Regular",
+                "fontSize": 12,
+              },
+            ]
+          }
+        >
+          Get started
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

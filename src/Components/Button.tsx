@@ -1,5 +1,6 @@
 import React from 'react';
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {AppColors} from '../Utils/Colors';
 
 type ButtonProps = {
   label?: string;
@@ -7,12 +8,14 @@ type ButtonProps = {
   backdroundColor: string;
   buttonStyle?: Object;
   border?: number;
+  textStyle?: object;
 };
 const Button = ({
   label,
   backdroundColor,
   border,
   buttonStyle,
+  textStyle,
   onClick,
 }: ButtonProps) => {
   return (
@@ -26,7 +29,7 @@ const Button = ({
         },
       ]}
       onPress={onClick}>
-      <Text style={styles.text}>{label}</Text>
+      <Text style={[styles.text, textStyle]}>{label}</Text>
     </TouchableOpacity>
   );
 };
@@ -38,6 +41,7 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: 'center',
+    color: AppColors.white,
   },
 });
 export default Button;

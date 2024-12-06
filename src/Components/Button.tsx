@@ -5,14 +5,14 @@ import {AppColors} from '../Utils/Colors';
 type ButtonProps = {
   label?: string;
   onClick?: () => {};
-  backdroundColor: string;
+  backgroundColor?: string;
   buttonStyle?: Object;
   border?: number;
   textStyle?: object;
 };
 const Button = ({
   label,
-  backdroundColor,
+  backgroundColor,
   border,
   buttonStyle,
   textStyle,
@@ -24,7 +24,7 @@ const Button = ({
         styles.container,
         buttonStyle,
         {
-          backgroundColor: backdroundColor,
+          backgroundColor: backgroundColor,
           borderRadius: border,
         },
       ]}

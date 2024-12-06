@@ -33,7 +33,7 @@ const SplashScreen = () => {
           </Text>
           <Button
             label={STRINGS.GET_STARTED}
-            backdroundColor={buttonColors.blue}
+            backgroundColor={buttonColors.blue}
             border={25}
             buttonStyle={styles.buttonContainer}
             textStyle={styles.buttonText}

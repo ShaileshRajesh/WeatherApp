@@ -4,7 +4,7 @@ import {AppColors} from '../Utils/Colors';
 
 type ButtonProps = {
   label?: string;
-  onClick?: () => {};
+  onClick?: () => void;
   backgroundColor?: string;
   buttonStyle?: Object;
   border?: number;

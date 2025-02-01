@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather App Documentation Home</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">Weather App</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#Image">Image</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p></p>
+                    <h1>Home</h1>
+                </header>
+                
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><p>This is a new <a href="https://reactnative.dev"><strong>React Native</strong></a> project, bootstrapped using <a href="https://github.com/react-native-community/cli"><code>@react-native-community/cli</code></a>.</p>
+<h1>Getting Started</h1>
+<blockquote>
+<p><strong>Note</strong>: Make sure you have completed the <a href="https://reactnative.dev/docs/environment-setup">React Native - Environment Setup</a> instructions till &quot;Creating a new application&quot; step, before proceeding.</p>
+</blockquote>
+<h2>Step 1: Start the Metro Server</h2>
+<p>First, you will need to start <strong>Metro</strong>, the JavaScript <em>bundler</em> that ships <em>with</em> React Native.</p>
+<p>To start Metro, run the following command from the <em>root</em> of your React Native project:</p>
+<pre class="prettyprint source lang-bash"><code># using npm
+npm start
+
+# OR using Yarn
+yarn start
+</code></pre>
+<h2>Step 2: Start your Application</h2>
+<p>Let Metro Bundler run in its <em>own</em> terminal. Open a <em>new</em> terminal from the <em>root</em> of your React Native project. Run the following command to start your <em>Android</em> or <em>iOS</em> app:</p>
+<h3>For Android</h3>
+<pre class="prettyprint source lang-bash"><code># using npm
+npm run android
+
+# OR using Yarn
+yarn android
+</code></pre>
+<h3>For iOS</h3>
+<pre class="prettyprint source lang-bash"><code># using npm
+npm run ios
+
+# OR using Yarn
+yarn ios
+</code></pre>
+<p>If everything is set up <em>correctly</em>, you should see your new app running in your <em>Android Emulator</em> or <em>iOS Simulator</em> shortly provided you have set up your emulator/simulator correctly.</p>
+<p>This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.</p>
+<h2>Step 3: Modifying your App</h2>
+<p>Now that you have successfully run the app, let's modify it.</p>
+<ol>
+<li>
+<p>Open <code>App.tsx</code> in your text editor of choice and edit some lines.</p>
+</li>
+<li>
+<p>For <strong>Android</strong>: Press the <kbd>R</kbd> key twice or select <strong>&quot;Reload&quot;</strong> from the <strong>Developer Menu</strong> (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!</p>
+<p>For <strong>iOS</strong>: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!</p>
+</li>
+</ol>
+<h2>Congratulations! :tada:</h2>
+<p>You've successfully run and modified your React Native App. :partying_face:</p>
+<h3>Now what?</h3>
+<ul>
+<li>If you want to add this new React Native code to an existing application, check out the <a href="https://reactnative.dev/docs/integration-with-existing-apps">Integration guide</a>.</li>
+<li>If you're curious to learn more about React Native, check out the <a href="https://reactnative.dev/docs/getting-started">Introduction to React Native</a>.</li>
+</ul>
+<h1>Troubleshooting</h1>
+<p>If you can't get this to work, see the <a href="https://reactnative.dev/docs/troubleshooting">Troubleshooting</a> page.</p>
+<h1>Learn More</h1>
+<p>To learn more about React Native, take a look at the following resources:</p>
+<ul>
+<li><a href="https://reactnative.dev">React Native Website</a> - learn more about React Native.</li>
+<li><a href="https://reactnative.dev/docs/environment-setup">Getting Started</a> - an <strong>overview</strong> of React Native and how setup your environment.</li>
+<li><a href="https://reactnative.dev/docs/getting-started">Learn the Basics</a> - a <strong>guided tour</strong> of the React Native <strong>basics</strong>.</li>
+<li><a href="https://reactnative.dev/blog">Blog</a> - read the latest official React Native <strong>Blog</strong> posts.</li>
+<li><a href="https://github.com/facebook/react-native"><code>@facebook/react-native</code></a> - the Open Source; GitHub <strong>repository</strong> for React Native.</li>
+</ul></article>
+    </section>
+
+
+
+
+
+
+            </div>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

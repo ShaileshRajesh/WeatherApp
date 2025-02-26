@@ -52,7 +52,8 @@ const Button = ({
           borderRadius: border,
         },
       ]}
-      onPress={onClick}>
+      onPress={onClick}
+      activeOpacity={0.5}>
       <Text style={[styles.text, textStyle]}>{label}</Text>
     </TouchableOpacity>
   );

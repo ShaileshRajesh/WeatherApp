@@ -2,30 +2,22 @@ import React from 'react';
 import {View, StyleSheet, SafeAreaView} from 'react-native';
 import Button from '../Components/Button';
 import {AppColors, buttonColors} from '../Utils/Colors';
-import {STRINGS} from '../Utils/Constants';
+import {ROUTES, STRINGS} from '../Utils/Constants';
 import Image from '../Components/Image';
 import Text from '../Components/Text';
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
 import {fontFamily} from '../Utils/Styling';
+import useNavigate from '../CustomHooks/useNavigate';
 
 /**
  * @screen
  * Splash screen which is shown intially in the application.
  */
 
-type RootStackParamList = {
-  successScreen: undefined;
-  loginScreen: undefined;
-};
-
-type NavigationProps = StackNavigationProp<RootStackParamList, 'loginScreen'>;
-
 const SplashScreen = () => {
-  const navigation = useNavigation<NavigationProps>();
+  const navigate = useNavigate();
 
   const onHandlePress = () => {
-    navigation.navigate('loginScreen');
+    navigate(ROUTES.LOGIN);
   };
   return (
     <SafeAreaView style={styles.container}>

@@ -9,17 +9,23 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {fontFamily} from '../Utils/Styling';
 
+/**
+ * @screen
+ * Splash screen which is shown intially in the application.
+ */
+
 type RootStackParamList = {
   successScreen: undefined;
+  loginScreen: undefined;
 };
 
-type NavigationProps = StackNavigationProp<RootStackParamList, 'successScreen'>;
+type NavigationProps = StackNavigationProp<RootStackParamList, 'loginScreen'>;
 
 const SplashScreen = () => {
   const navigation = useNavigation<NavigationProps>();
 
   const onHandlePress = () => {
-    navigation.navigate('successScreen');
+    navigation.navigate('loginScreen');
   };
   return (
     <SafeAreaView style={styles.container}>

@@ -17,6 +17,7 @@ import {AppColors} from '../Utils/Colors';
  * @param {(value: string) => void} onChangeText - Callback function when text changes.
  * @param {string} value - The current value of the input.
  * @param {string} placeHolderText - Placeholder text for the input field.
+ * @param {string} maxLength - Limits the maximum number of characters that can be entered.
  * @returns {JSX.Element} The IconWithTextInput component.
  */
 
@@ -26,6 +27,7 @@ type IconWithTextInputProps = {
   onChangeText?: (value: any) => void;
   value?: any;
   placeHolderText?: string;
+  maxLength?: number;
 };
 
 const IconWithTextInput = ({
@@ -33,6 +35,7 @@ const IconWithTextInput = ({
   imageStyle = {},
   value,
   placeHolderText = '',
+  maxLength,
   onChangeText,
 }: IconWithTextInputProps) => {
   const handleText = (value: any) => {
@@ -46,6 +49,7 @@ const IconWithTextInput = ({
         value={value}
         onChangeText={handleText}
         style={styles.input}
+        maxLength={maxLength}
       />
     </View>
   );
@@ -54,8 +58,7 @@ const IconWithTextInput = ({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    width: '80%',
-    paddingVertical: 1,
+    paddingVertical: 8,
     backgroundColor: AppColors.white,
     borderWidth: 2,
     borderColor: AppColors.lightBlue,

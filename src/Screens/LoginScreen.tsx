@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Button from '../Components/Button';
 import {AppColors, buttonColors} from '../Utils/Colors';
@@ -10,30 +10,50 @@ import IconWithTextInput from '../Components/IconWithTextInput';
 import auth from '@react-native-firebase/auth';
 import useNavigate from '../CustomHooks/useNavigate';
 import {saveLoginData} from '../LocalStorage/Database';
+import {googleSignIn} from '../Utils/GoogleSignInHelper';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import {WEB_CLIENT_ID} from 'react-native-dotenv';
 
 const LoginScreen = () => {
   const navigate = useNavigate();
-  const [values, setValues] = useState({email: '', password: ''});
-  const [error, setError] = useState({email: '', password: ''});
+  const [values, setValues] = useState({name: '', email: '', password: ''});
+  const [error, setError] = useState({name: '', email: '', password: ''});
 
-  const checkLoginValidation = (email: string, password: string) => {
-    setError({email: '', password: ''});
-    if (!email && !password) {
-      setError({email: STRINGS.ENTER_EMAIL, password: STRINGS.ENTER_PASSWORD});
+  useEffect(() => {
+    GoogleSignin.configure({
+      webClientId: WEB_CLIENT_ID,
+    });
+  }, []);
+
+  const checkLoginValidation = (
+    name: string,
+    email: string,
+    password: string,
+  ) => {
+    setError({name: '', email: '', password: ''});
+    if (!name && !email && !password) {
+      setError({
+        name: STRINGS.ENTER_NAME,
+        email: STRINGS.ENTER_EMAIL,
+        password: STRINGS.ENTER_PASSWORD,
+      });
       return false;
+    } else if (!name) {
+      setError({name: STRINGS.ENTER_NAME, email: '', password: ''});
     } else if (!email) {
-      setError({email: STRINGS.ENTER_EMAIL, password: ''});
+      setError({email: STRINGS.ENTER_EMAIL, password: '', name: ''});
       return false;
     } else if (!REGEX.emailRegex.test(email)) {
-      setError({email: STRINGS.EMAIL_ERROR, password: ''});
+      setError({email: STRINGS.EMAIL_ERROR, password: '', name: ''});
       return false;
     } else if (!password) {
-      setError({email: '', password: STRINGS.ENTER_PASSWORD});
+      setError({email: '', password: STRINGS.ENTER_PASSWORD, name: ''});
       return false;
     } else if (!REGEX.passwordRegex.test(password)) {
       setError({
         email: '',
         password: STRINGS.PASSWORD_ERROR,
+        name: '',
       });
       return false;
     }
@@ -42,7 +62,11 @@ const LoginScreen = () => {
   };
 
   const handleSignUp = () => {
-    const isValid = checkLoginValidation(values.email, values.password);
+    const isValid = checkLoginValidation(
+      values.name,
+      values.email,
+      values.password,
+    );
 
     if (!isValid) {
       return false;
@@ -51,7 +75,7 @@ const LoginScreen = () => {
       .createUserWithEmailAndPassword(values.email, values.password)
       .then(async () => {
         await saveLoginData(1, true);
-        navigate(ROUTES.SUCCESS);
+        navigate(ROUTES.SUCCESS_SCREEN);
       })
       .catch(error => {
         console.log('inside the error>>>');
@@ -68,10 +92,24 @@ const LoginScreen = () => {
   };
 
   const handleInputChange = (text: string, textType: string) => {
+    setError(prevValues => ({
+      ...prevValues,
+      [textType]: '',
+    }));
     setValues(prevValues => ({
       ...prevValues,
       [textType]: text,
     }));
+  };
+
+  const handleGoogleSignIn = async () => {
+    const {status, data} = await googleSignIn();
+    console.log('data>>>', data);
+
+    if (status && data) {
+      saveLoginData(1, true);
+      navigate(ROUTES.SUCCESS_SCREEN);
+    }
   };
 
   return (
@@ -80,13 +118,25 @@ const LoginScreen = () => {
         source={require('../../assets/Icons/sun.png')}
         imgStyle={styles.backgroundImage}
       />
-      <Image source={require('../../assets/Icons/walkingMan.png')} />
+      {/* <Image
+        source={require('../../assets/Icons/raindrop.png')}
+        imgStyle={{height: '20%', width: '80%', marginTop: '4%'}}
+      /> */}
 
-      <View style={styles.formContainer}>
-        <Text textStyle={styles.rainDropText}>{STRINGS.RAINDROPS}</Text>
+      <Text textStyle={styles.rainDropText}>{STRINGS.RAINDROPS}</Text>
 
-        <Text textStyle={styles.singUpText}>{STRINGS.SINGN_UP}</Text>
-        <View style={styles.formContainer}>
+      {/* <View style={styles.formContainer}> */}
+      <Text textStyle={styles.singUpText}>{STRINGS.SINGN_UP}</Text>
+      <View style={[styles.formContainer]}>
+        <View style={{paddingVertical: 15}}>
+          <IconWithTextInput
+            imgSource={require('../../assets/Icons/blurMail.png')}
+            placeHolderText="Name"
+            value={values.name}
+            maxLength={15}
+            onChangeText={(text: string) => handleInputChange(text, 'name')}
+          />
+          {error.name && <Text textStyle={styles.errorText}>{error.name}</Text>}
           <IconWithTextInput
             imgSource={require('../../assets/Icons/blurMail.png')}
             placeHolderText="Email address"
@@ -106,16 +156,25 @@ const LoginScreen = () => {
           {error.password && (
             <Text textStyle={styles.errorText}>{error.password}</Text>
           )}
-          <Button
-            label={STRINGS.CREATE_ACCOUNT}
-            backgroundColor={buttonColors.yellow}
-            border={25}
-            buttonStyle={styles.buttonContainer}
-            textStyle={styles.buttonText}
-            onClick={handleSignUp}
-          />
         </View>
+        <Button
+          label={STRINGS.CREATE_ACCOUNT}
+          backgroundColor={buttonColors.yellow}
+          border={25}
+          buttonStyle={styles.buttonContainer}
+          textStyle={styles.buttonText}
+          onClick={handleSignUp}
+        />
+        <Button
+          label={STRINGS.GOOGLE_SIGN_IN}
+          backgroundColor={buttonColors.yellow}
+          border={25}
+          buttonStyle={styles.buttonContainer}
+          textStyle={styles.buttonText}
+          onClick={handleGoogleSignIn}
+        />
       </View>
+      {/* </View> */}
     </View>
   );
 };
@@ -129,9 +188,7 @@ const styles = StyleSheet.create({
   backgroundImage: {
     width: '100%',
   },
-
   buttonContainer: {
-    marginTop: 25,
     paddingVertical: 16,
   },
   imageContainer: {
@@ -139,7 +196,6 @@ const styles = StyleSheet.create({
     height: 320,
     marginTop: '5%',
   },
-
   droplets: {
     alignSelf: 'center',
     justifyContent: 'center',
@@ -155,6 +211,7 @@ const styles = StyleSheet.create({
     fontFamily: fontFamily.bold,
     fontSize: 36,
     color: AppColors.white,
+    marginTop: '8%',
   },
   discription1: {
     fontFamily: fontFamily.regular,
@@ -195,7 +252,7 @@ const styles = StyleSheet.create({
   singUpText: {
     marginTop: 15,
     color: AppColors.white,
-    fontSize: 14,
+    fontSize: 18,
   },
 });
 

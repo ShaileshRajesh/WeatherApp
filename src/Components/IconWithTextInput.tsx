@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import Image from './Image';
 import {AppColors} from '../Utils/Colors';
+import {isIos} from '../Utils/PlatformHelper';
 
 /**
  * A reusable text input component with an icon.
@@ -58,14 +59,14 @@ const IconWithTextInput = ({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    paddingVertical: 8,
+    paddingVertical: isIos() ? 8 : 0,
     backgroundColor: AppColors.white,
     borderWidth: 2,
     borderColor: AppColors.lightBlue,
     alignItems: 'center',
     borderRadius: 10,
-    marginTop: '2%',
     paddingLeft: 10,
+    marginTop: '3%',
   },
   image: {
     width: 20,

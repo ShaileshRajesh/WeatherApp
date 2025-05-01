@@ -7,6 +7,7 @@ import Image from '../Components/Image';
 import Text from '../Components/Text';
 import {fontFamily} from '../Utils/Styling';
 import useNavigate from '../CustomHooks/useNavigate';
+import useAuth from '../CustomHooks/useAuth';
 
 /**
  * @screen
@@ -15,9 +16,15 @@ import useNavigate from '../CustomHooks/useNavigate';
 
 const SplashScreen = () => {
   const navigate = useNavigate();
+  const {isUserLoggedIn} = useAuth();
 
   const onHandlePress = () => {
-    navigate(ROUTES.LOGIN);
+    if (isUserLoggedIn) {
+      navigate(ROUTES.APP_STACK);
+    } else {
+      navigate(ROUTES.AUTH_STACK);
+    }
+    // navigate(ROUTES.LOGIN);
   };
   return (
     <SafeAreaView style={styles.container}>

@@ -3,18 +3,26 @@ import {StyleSheet, View} from 'react-native';
 import Text from '../Components/Text';
 import Button from '../Components/Button';
 import {AppColors, buttonColors} from '../Utils/Colors';
+import useNavigate from '../CustomHooks/useNavigate';
+import {ROUTES, STRINGS} from '../Utils/Constants';
 
 const SuccessScreen = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate(ROUTES.APP_STACK);
+  };
   return (
     <View style={styles.mainContainer}>
       <View style={styles.subContainer}>
-        <Text textStyle={styles.text}>You’re all set!</Text>
+        <Text textStyle={styles.text}>{STRINGS.YOUR_ALL_SET}</Text>
         <Button
-          label="Let's Go!"
+          label={STRINGS.LETS_GO}
           buttonStyle={styles.button}
           border={25}
           backgroundColor={AppColors.white}
           textStyle={styles.buttonText}
+          onClick={handleNavigation}
         />
       </View>
     </View>

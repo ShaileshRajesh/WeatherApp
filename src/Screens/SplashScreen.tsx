@@ -24,7 +24,6 @@ const SplashScreen = () => {
     } else {
       navigate(ROUTES.AUTH_STACK);
     }
-    // navigate(ROUTES.LOGIN);
   };
   return (
     <SafeAreaView style={styles.container}>

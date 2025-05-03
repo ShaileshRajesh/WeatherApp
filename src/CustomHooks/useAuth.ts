@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import {getLoginData} from '../LocalStorage/Database';
+import {log} from '../Utils/LogHelper';
 
 /**
  * Custom hook to check and manage user authentication status.
@@ -14,14 +15,13 @@ const useAuth = () => {
     const checkLoginStatus = async () => {
       try {
         const loginData = getLoginData();
-        console.log('loginData in useauth>>>', loginData);
         if (loginData.length > 0) {
           setIsUserLoggedIn(loginData[0].isUserLoggedIn);
         } else {
           setIsUserLoggedIn(false);
         }
       } catch (error) {
-        console.error('Error fetching login status:', error);
+        log.error('Error in fetching loginData');
         setIsUserLoggedIn(false);
       }
     };

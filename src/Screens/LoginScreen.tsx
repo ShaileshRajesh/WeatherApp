@@ -78,7 +78,6 @@ const LoginScreen = () => {
         navigate(ROUTES.SUCCESS_SCREEN);
       })
       .catch(error => {
-        console.log('inside the error>>>');
         if (error.code === 'auth/email-already-in-use') {
           console.log('That email address is already in use!');
         }
@@ -104,7 +103,6 @@ const LoginScreen = () => {
 
   const handleGoogleSignIn = async () => {
     const {status, data} = await googleSignIn();
-    console.log('data>>>', data);
 
     if (status && data) {
       saveLoginData(1, true);

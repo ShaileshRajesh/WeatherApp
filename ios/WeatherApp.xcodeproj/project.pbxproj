@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* WeatherAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WeatherAppTests.m */; };
-		0A0DBC8A12B24F4E835FC4FD /* AnonymousPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17C918EC3DB140B8BCB7572D /* AnonymousPro-Italic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		776208AF007846E4B234363E /* Roboto-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB8C8EE5CE5E4B6B8F10E1C3 /* Roboto-ExtraBold.ttf */; };
 		79949AC334904DDDBD1CE041 /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD6B2C06BD1C3918A112C22 /* Pods_WeatherApp.framework */; };
+		7B2DBDB9B995468B8D707AD5 /* Roboto-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74355B59D68490088A346C0 /* Roboto-SemiBold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		83B59206660F4C90BDEF60D3 /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18C56D70CC9249E385AD6CFD /* AnonymousPro-Regular.ttf */; };
-		918634C69F3840A8B00897A3 /* AnonymousPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9302BF18174CE795D374CF /* AnonymousPro-Bold.ttf */; };
+		8C628D65603345069B39D172 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79D411C505C04B70A9B33143 /* Roboto-Light.ttf */; };
+		8F4AC3425D684B28AD422304 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A09DA4F9D9914031A4AECADC /* Roboto-Thin.ttf */; };
+		B2B29402B76145D09FC559D2 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A488C9ED20C4003ABBB6F66 /* Roboto-Regular.ttf */; };
+		BB296682A29C414981DF87AB /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7112A50E854892BBC7048E /* Roboto-Italic.ttf */; };
+		DFA4516BECED4140A2ED89D2 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03A3CC4A90FA4F01A5F01716 /* Roboto-Medium.ttf */; };
 		EAD781AC2D05CBE500B1B860 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAD781AB2D05CBE500B1B860 /* GoogleService-Info.plist */; };
 		ECF67D4021F229147DDAA551 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
-		F254AB6F5EBE4803A687BAB5 /* AnonymousPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FD0331C7F04DDF9F2F2587 /* AnonymousPro-BoldItalic.ttf */; };
+		F34DBC1A31214CB0B939CB79 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A331E88807481A8A99BB33 /* Roboto-Bold.ttf */; };
 		F4D36059B0365BCC21BAA50D /* Pods_WeatherApp_WeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CB5EF6D6BC321CECD93478 /* Pods_WeatherApp_WeatherAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* WeatherAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherAppTests.m; sourceTree = "<group>"; };
 		0116A30BB8AE56399735599A /* Pods-WeatherApp-WeatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp-WeatherAppTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp-WeatherAppTests/Pods-WeatherApp-WeatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		03A3CC4A90FA4F01A5F01716 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WeatherApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = WeatherApp/AppDelegate.mm; sourceTree = "<group>"; };
@@ -44,15 +49,18 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WeatherApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WeatherApp/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = WeatherApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		17C918EC3DB140B8BCB7572D /* AnonymousPro-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AnonymousPro-Italic.ttf"; path = "../assets/fonts/AnonymousPro-Italic.ttf"; sourceTree = "<group>"; };
-		18C56D70CC9249E385AD6CFD /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AnonymousPro-Regular.ttf"; path = "../assets/fonts/AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
+		1D7112A50E854892BBC7048E /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../assets/fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		23CB5EF6D6BC321CECD93478 /* Pods_WeatherApp_WeatherAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_WeatherAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A331E88807481A8A99BB33 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		6A488C9ED20C4003ABBB6F66 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		6F91B4032967673D0231D0A6 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		766DB825C2C518A0FF7A0328 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		79D411C505C04B70A9B33143 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WeatherApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8E9302BF18174CE795D374CF /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AnonymousPro-Bold.ttf"; path = "../assets/fonts/AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
-		95FD0331C7F04DDF9F2F2587 /* AnonymousPro-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AnonymousPro-BoldItalic.ttf"; path = "../assets/fonts/AnonymousPro-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A09DA4F9D9914031A4AECADC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		AB8C8EE5CE5E4B6B8F10E1C3 /* Roboto-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-ExtraBold.ttf"; path = "../assets/fonts/Roboto-ExtraBold.ttf"; sourceTree = "<group>"; };
 		ABD6B2C06BD1C3918A112C22 /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C74355B59D68490088A346C0 /* Roboto-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-SemiBold.ttf"; path = "../assets/fonts/Roboto-SemiBold.ttf"; sourceTree = "<group>"; };
 		D1297361165368C9CB58D839 /* Pods-WeatherApp-WeatherAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp-WeatherAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp-WeatherAppTests/Pods-WeatherApp-WeatherAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAD781AB2D05CBE500B1B860 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -122,10 +130,14 @@
 		5478CB837ED14483AE0126C9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8E9302BF18174CE795D374CF /* AnonymousPro-Bold.ttf */,
-				95FD0331C7F04DDF9F2F2587 /* AnonymousPro-BoldItalic.ttf */,
-				17C918EC3DB140B8BCB7572D /* AnonymousPro-Italic.ttf */,
-				18C56D70CC9249E385AD6CFD /* AnonymousPro-Regular.ttf */,
+				59A331E88807481A8A99BB33 /* Roboto-Bold.ttf */,
+				AB8C8EE5CE5E4B6B8F10E1C3 /* Roboto-ExtraBold.ttf */,
+				1D7112A50E854892BBC7048E /* Roboto-Italic.ttf */,
+				79D411C505C04B70A9B33143 /* Roboto-Light.ttf */,
+				03A3CC4A90FA4F01A5F01716 /* Roboto-Medium.ttf */,
+				6A488C9ED20C4003ABBB6F66 /* Roboto-Regular.ttf */,
+				C74355B59D68490088A346C0 /* Roboto-SemiBold.ttf */,
+				A09DA4F9D9914031A4AECADC /* Roboto-Thin.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -273,10 +285,14 @@
 				EAD781AC2D05CBE500B1B860 /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				ECF67D4021F229147DDAA551 /* PrivacyInfo.xcprivacy in Resources */,
-				918634C69F3840A8B00897A3 /* AnonymousPro-Bold.ttf in Resources */,
-				F254AB6F5EBE4803A687BAB5 /* AnonymousPro-BoldItalic.ttf in Resources */,
-				0A0DBC8A12B24F4E835FC4FD /* AnonymousPro-Italic.ttf in Resources */,
-				83B59206660F4C90BDEF60D3 /* AnonymousPro-Regular.ttf in Resources */,
+				F34DBC1A31214CB0B939CB79 /* Roboto-Bold.ttf in Resources */,
+				776208AF007846E4B234363E /* Roboto-ExtraBold.ttf in Resources */,
+				BB296682A29C414981DF87AB /* Roboto-Italic.ttf in Resources */,
+				8C628D65603345069B39D172 /* Roboto-Light.ttf in Resources */,
+				DFA4516BECED4140A2ED89D2 /* Roboto-Medium.ttf in Resources */,
+				B2B29402B76145D09FC559D2 /* Roboto-Regular.ttf in Resources */,
+				7B2DBDB9B995468B8D707AD5 /* Roboto-SemiBold.ttf in Resources */,
+				8F4AC3425D684B28AD422304 /* Roboto-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,10 @@
 export const fontFamily = {
-  bold: 'AnonymousPro-Bold',
-  boldItalic: 'AnonymousPro-BoldItalic',
-  italic: 'AnonymousPro-Italic',
-  regular: 'AnonymousPro-Regular',
+  boldItalic: 'Roboto-Italic',
+  italic: 'Roboto-Italic',
+  extraBold: 'Roboto-ExtraBold',
+  semiBold: 'Roboto-SemiBold',
+  bold: 'Roboto-Bold',
+  medium: 'Roboto-Medium',
+  regular: 'Roboto-Regular',
+  thin: 'Roboto-Thin',
 };

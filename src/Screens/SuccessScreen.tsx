@@ -10,7 +10,7 @@ const SuccessScreen = () => {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    navigate(ROUTES.APP_STACK);
+    navigate(ROUTES.DRAWER_SCREEN);
   };
   return (
     <View style={styles.mainContainer}>

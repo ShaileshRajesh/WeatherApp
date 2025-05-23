@@ -13,6 +13,7 @@ import {saveLoginData} from '../LocalStorage/Database';
 import {googleSignIn} from '../Utils/GoogleSignInHelper';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import {WEB_CLIENT_ID} from 'react-native-dotenv';
+import {ICONS} from '../Utils/Icons';
 
 const LoginScreen = () => {
   const navigate = useNavigate();
@@ -112,10 +113,7 @@ const LoginScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Image
-        source={require('../../assets/Icons/sun.png')}
-        imgStyle={styles.backgroundImage}
-      />
+      <Image source={ICONS.SUN} imgStyle={styles.backgroundImage} />
       {/* <Image
         source={require('../../assets/Icons/raindrop.png')}
         imgStyle={{height: '20%', width: '80%', marginTop: '4%'}}
@@ -128,7 +126,7 @@ const LoginScreen = () => {
       <View style={[styles.formContainer]}>
         <View style={{paddingVertical: 15}}>
           <IconWithTextInput
-            imgSource={require('../../assets/Icons/blurMail.png')}
+            imgSource={ICONS.CLEAR_MAIL}
             placeHolderText="Name"
             value={values.name}
             maxLength={15}
@@ -136,7 +134,7 @@ const LoginScreen = () => {
           />
           {error.name && <Text textStyle={styles.errorText}>{error.name}</Text>}
           <IconWithTextInput
-            imgSource={require('../../assets/Icons/blurMail.png')}
+            imgSource={ICONS.CLEAR_MAIL}
             placeHolderText="Email address"
             value={values.email}
             onChangeText={(text: string) => handleInputChange(text, 'email')}
@@ -145,7 +143,7 @@ const LoginScreen = () => {
             <Text textStyle={styles.errorText}>{error.email}</Text>
           )}
           <IconWithTextInput
-            imgSource={require('../../assets/Icons/blurEye.png')}
+            imgSource={ICONS.CLEAR_EYE}
             placeHolderText="Password"
             value={values.password}
             maxLength={15}
@@ -185,6 +183,7 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     width: '100%',
+    height: '25%',
   },
   buttonContainer: {
     paddingVertical: 16,

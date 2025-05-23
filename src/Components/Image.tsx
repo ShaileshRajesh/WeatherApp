@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React, {ReactNode, useEffect, useState} from 'react';
 import {
   Image as RNImage,
   ImageBackground,
@@ -6,15 +6,16 @@ import {
   ImageStyle,
   ViewStyle,
 } from 'react-native';
+import {constructCdnUrl} from '../Utils/Icons';
 
 type ImageProps = {
-  source?: ImageSourcePropType;
+  source?: string;
   height?: number | string;
   width?: number | string;
   imgStyle?: ImageStyle;
   resizeMode?: 'cover' | 'contain' | 'stretch' | 'repeat' | 'center';
   backgroungImgStyle?: ViewStyle;
-  bgImgsource?: ImageSourcePropType;
+  bgImgsource?: string;
   isBackgroundImage?: boolean;
   children?: ReactNode;
 };
@@ -59,12 +60,31 @@ const Image = ({
   isBackgroundImage = false,
   children,
 }: ImageProps) => {
+  const fallbackUri = {
+    uri: 'https://cloudinary-marketing-res.cloudinary.com/images/w_60,h_60,c_scale/v1699909962/fallback_image_header/fallback_image_header-png?_i=AA',
+  };
+  const [imgUri, setImgUri] = useState<ImageSourcePropType>(fallbackUri);
+
+  useEffect(() => {
+    const finalSource = source || bgImgsource;
+    if (finalSource) {
+      setImgUri({
+        uri: constructCdnUrl(finalSource),
+      });
+    }
+  }, [source, bgImgsource]);
+
   return (
     <>
       {!isBackgroundImage ? (
-        <RNImage source={source} style={imgStyle} resizeMode={resizeMode} />
+        <RNImage
+          source={imgUri}
+          style={imgStyle}
+          resizeMode={resizeMode}
+          onError={() => setImgUri(fallbackUri)}
+        />
       ) : (
-        <ImageBackground source={bgImgsource} style={backgroungImgStyle}>
+        <ImageBackground source={imgUri} style={backgroungImgStyle}>
           {children}
         </ImageBackground>
       )}

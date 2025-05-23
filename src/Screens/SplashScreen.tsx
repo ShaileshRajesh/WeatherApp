@@ -8,6 +8,7 @@ import Text from '../Components/Text';
 import {fontFamily} from '../Utils/Styling';
 import useNavigate from '../CustomHooks/useNavigate';
 import useAuth from '../CustomHooks/useAuth';
+import {ICONS} from '../Utils/Icons';
 
 /**
  * @screen
@@ -20,7 +21,7 @@ const SplashScreen = () => {
 
   const onHandlePress = () => {
     if (isUserLoggedIn) {
-      navigate(ROUTES.APP_STACK);
+      navigate(ROUTES.DRAWER_SCREEN);
     } else {
       navigate(ROUTES.AUTH_STACK);
     }
@@ -30,16 +31,10 @@ const SplashScreen = () => {
       <View style={styles.imageContainer}>
         <Image
           isBackgroundImage
-          bgImgsource={require('../../assets/Icons/blueBackground.png')}
+          bgImgsource={ICONS.BLUE_BACKGROUND}
           backgroungImgStyle={styles.backgroundImage}>
-          <Image
-            source={require('../../assets/Icons/droplets.png')}
-            imgStyle={styles.droplets}
-          />
-          <Image
-            source={require('../../assets/Icons/walking_in_rain.png')}
-            imgStyle={styles.walkingMan}
-          />
+          <Image source={ICONS.DROPLETS} imgStyle={styles.droplets} />
+          <Image source={ICONS.WALKING_IN_RAIN} imgStyle={styles.walkingMan} />
         </Image>
         <View style={styles.subContainer}>
           <Text textStyle={styles.rainDropText}>{STRINGS.RAINDROPS}</Text>
@@ -86,12 +81,16 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     top: '5%',
+    height: 214,
+    width: 250,
   },
   walkingMan: {
     alignSelf: 'center',
     position: 'absolute',
     top: '35%',
     left: '5%',
+    height: 309,
+    width: 287,
   },
   subContainer: {
     justifyContent: 'center',

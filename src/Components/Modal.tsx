@@ -14,7 +14,7 @@ const Modal = () => {
     hideModal,
   } = useUiStore();
 
-  const getIcon = () => {
+  const getIcon = (): string | undefined => {
     switch (iconName) {
       case 'scuccess':
         return ICONS.SUCCESS;
@@ -23,7 +23,7 @@ const Modal = () => {
         return ICONS.WARNING;
 
       default:
-        return null;
+        return undefined;
     }
   };
 

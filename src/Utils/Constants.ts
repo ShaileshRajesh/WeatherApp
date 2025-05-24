@@ -23,9 +23,15 @@ export const ROUTES: any = {
   LOGIN_SCREEN: 'loginScreen',
   SUCCESS_SCREEN: 'successScreen',
   FORECAST_SCREEN: 'forecastScreen',
+  DRAWER_SCREEN: 'drawerScreen',
 };
 
 export const REGEX = {
   emailRegex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   passwordRegex: /^(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/,
+};
+
+export const DRAWER_OPTIONS = {
+  SETTINGS: 'Settings',
+  LOGOUT: 'Logout',
 };

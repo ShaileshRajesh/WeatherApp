@@ -21,7 +21,7 @@ const useAuth = () => {
           setIsUserLoggedIn(false);
         }
       } catch (error) {
-        log.error('Error in fetching loginData');
+        log.error('Error in fetching loginData', error);
         setIsUserLoggedIn(false);
       }
     };

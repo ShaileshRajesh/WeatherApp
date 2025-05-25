@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  View,
-  TextInput,
-  ImageSourcePropType,
-  ImageStyle,
-  StyleSheet,
-} from 'react-native';
+import {View, TextInput, ImageStyle, StyleSheet} from 'react-native';
 import Image from './Image';
 import {AppColors} from '../Utils/Colors';
 import {isIos} from '../Utils/PlatformHelper';
@@ -23,7 +17,7 @@ import {isIos} from '../Utils/PlatformHelper';
  */
 
 type IconWithTextInputProps = {
-  imgSource?: ImageSourcePropType;
+  imgSource?: string;
   imageStyle?: ImageStyle;
   onChangeText?: (value: any) => void;
   value?: any;

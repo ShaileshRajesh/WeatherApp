@@ -31,7 +31,7 @@ exports[`renders splash screen 1`] = `
       <Image
         source={
           {
-            "testUri": "../../../assets/Icons/blueBackground.png",
+            "uri": "https://res.cloudinary.com/rnproject/image/upload/blueBackground.png",
           }
         }
         style={
@@ -52,33 +52,39 @@ exports[`renders splash screen 1`] = `
         }
       />
       <Image
+        onError={[Function]}
         resizeMode="cover"
         source={
           {
-            "testUri": "../../../assets/Icons/droplets.png",
+            "uri": "https://res.cloudinary.com/rnproject/image/upload/droplets.png",
           }
         }
         style={
           {
             "alignSelf": "center",
+            "height": 214,
             "justifyContent": "center",
             "top": "5%",
+            "width": 250,
           }
         }
       />
       <Image
+        onError={[Function]}
         resizeMode="cover"
         source={
           {
-            "testUri": "../../../assets/Icons/walking_in_rain.png",
+            "uri": "https://res.cloudinary.com/rnproject/image/upload/walking_in_rain.png",
           }
         }
         style={
           {
             "alignSelf": "center",
+            "height": 309,
             "left": "5%",
             "position": "absolute",
             "top": "35%",
+            "width": 287,
           }
         }
       />
@@ -97,7 +103,7 @@ exports[`renders splash screen 1`] = `
           [
             {
               "color": "#0F62FE",
-              "fontFamily": "AnonymousPro-Bold",
+              "fontFamily": "Roboto-Bold",
               "fontSize": 48,
             },
           ]
@@ -110,7 +116,7 @@ exports[`renders splash screen 1`] = `
           [
             {
               "color": "#0F62FE",
-              "fontFamily": "AnonymousPro-Regular",
+              "fontFamily": "Roboto-Regular",
               "fontSize": 18,
               "textAlign": "center",
             },
@@ -125,7 +131,7 @@ exports[`renders splash screen 1`] = `
             [
               {
                 "color": "#0F62FE",
-                "fontFamily": "AnonymousPro-Regular",
+                "fontFamily": "Roboto-Regular",
                 "fontSize": 18,
                 "textAlign": "center",
               },
@@ -155,7 +161,7 @@ exports[`renders splash screen 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={false}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -185,7 +191,7 @@ exports[`renders splash screen 1`] = `
               },
               {
                 "color": "#FFFFFF",
-                "fontFamily": "AnonymousPro-Regular",
+                "fontFamily": "Roboto-Regular",
                 "fontSize": 12,
               },
             ]

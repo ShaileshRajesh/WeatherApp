@@ -13,7 +13,14 @@
     "build-storybook": "build-storybook",
     "storybook-metro": "react-native start --config ./.ondevice/metro.storybook.js",
     "docs": "jsdoc -c jsdoc.conf.json",
-    "docs:start": "node script/doc/serve.js"
+    "docs:start": "node script/doc/serve.js",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@react-native-community/netinfo": "^11.4.1",
@@ -35,8 +42,9 @@
     "zustand": "^5.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
+    "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.27.1",
     "@babel/runtime": "^7.25.0",
     "@gorhom/bottom-sheet": "^5.0.6",
     "@react-native-async-storage/async-storage": "^2.1.0",
@@ -54,6 +62,7 @@
     "@storybook/addon-ondevice-knobs": "^7.6.20",
     "@storybook/addons": "^7.6.17",
     "@storybook/react-native": "^8.4.2",
+    "@testing-library/react-native": "^13.2.0",
     "@types/jest": "^29.5.14",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
@@ -62,8 +71,10 @@
     "better-docs": "^2.7.3",
     "eslint": "^8.19.0",
     "http-server": "^14.1.1",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "jsdoc": "^4.0.4",
+    "lint-staged": "13.3.0",
     "prettier": "2.8.8",
     "react-dom": "18.3.1",
     "react-native-reanimated": "^3.17.5",

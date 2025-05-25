@@ -30,7 +30,7 @@ type ButtonProps = {
   label?: string;
   onClick?: () => void;
   backgroundColor?: string;
-  buttonStyle?: Object;
+  buttonStyle?: object;
   border?: number;
   textStyle?: object;
 };
